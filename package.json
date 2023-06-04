@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "description": "app for the OBA to search easily ",
     "main": "app.js",
-    "type": "module",
     "scripts": {
         "test": "test",
         "dev": "nodemon",

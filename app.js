@@ -1,6 +1,6 @@
 // IMPORTS
 const express = require('express');
-const { router: frontendRouter } = require('./routes/frontend.js');
+// const { router: frontendRouter } = require('./routes/frontend.js');
 
 // VARIABLES
 const app = express();
@@ -14,13 +14,12 @@ app.set('views', './views');
 app.set('view engine', 'ejs');
 
 // MIDDLEWARE ROUTES
-//homepage
-app.use('/', frontendRouter);
+// homepage
+// app.use('/', frontendRouter);
 
 // api
-app.use('/api', apiRouter);
+// app.use('/api', apiRouter);
 
-// middleware for compression
-app.use(compression({ level: 9 }));
-
-app.listen(port);
+app.listen(port, () => {
+    console.log(`The server is running on port http://localhost:${port}/`);
+});
