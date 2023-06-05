@@ -1,6 +1,8 @@
 // IMPORTS
 const express = require('express');
-// const { router: frontendRouter } = require('./routes/frontend.js');
+const frontendRoutes = require('./routes/frontend');
+// different routers
+const apiRoutes = require('./routes/api');
 
 // VARIABLES
 const app = express();
@@ -14,6 +16,8 @@ app.set('views', './views');
 app.set('view engine', 'ejs');
 
 // MIDDLEWARE ROUTES
+app.use('/', frontendRoutes);
+app.use('/api', apiRoutes);
 // homepage
 // app.use('/', frontendRouter);
 
