@@ -8,4 +8,7 @@ router
     .get(apiController.getExample)
     .post(apiController.postExample);
 
+// .post(object.function-in-the-object)
+router.route('/search/').post(apiController.search);
+
 module.exports = router;
