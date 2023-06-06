@@ -1,23 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="/scripts/main.js" type="module" defer></script>
-        <title>Laagdrempelig Zoeken</title>
-    </head>
+<%- include('../partials/head'); -%>
 
-    <body>
-        <h1>Hi</h1>
-        <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
+<h1>Hi</h1>
+<!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
+<form id="searchForm">
+    <input
+        type="text"
+        name="query"
+        placeholder="What would you like to find"
+        id="query"
+    />
+    <button type="submit" id="searchButton">Search</button>
+</form>
+<div id="searchResults"></div>
 
-        <input
-            type="text"
-            name="query"
-            placeholder="What would you like to find"
-            id="query"
-        />
-        <button type="submit" id="searchButton">Search</button>
-    </body>
-</html>
+<%- include('../partials/footer'); -%>
